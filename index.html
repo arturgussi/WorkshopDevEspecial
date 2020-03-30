@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Comentários em HTML -->
+
+<!--
+    HTML -> HyperText Markup Language
+    HYPERTEXT -> textos que aceitão links e audiovisual
+    MARKUP -> marcação feita com tags
+    LANGUAGE -> linguagem
+
+-->
+
+<html> <!-- Isto é uma tag em HTML -->
+    <head> <!-- responsável por receber configurações da página -->
+        <meta charset=UTF-8> <!-- charset definie conjunto de caracteres especiais usados -->
+        <title>Casa Criativa</title> <!-- Nome que aparece na aba -->
+        
+         <style> /*  estilização em CSS -> Cascading StyleSheet  */
+            body {  /* propriedade: valor; */
+                background: #e5e5e5; /* cor do texto*/
+                color: #25282b; /* cor das letras */ 
+
+                text-align: center; /* alinhamento do texto*/
+            }
+
+            button {
+                color: #ff5e84;
+                border: none; /* tirando a borda dos botões */
+                font-weight: bold; /* negritando a fonte */
+                background: none; /* tirando a cor dos butões */
+            }
+
+            .fat { /* acessando uma classe por css */
+                color: white;
+                background: #ff5e84; 
+            }
+
+            #footer a {
+                color: #25282b;
+                text-decoration: none; /* underline */
+            }
+
+            .hide {
+                display: none;
+            }
+
+            #footer { /* acessando um id no css */
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+ <!--       <h1>Casa Criativa</h1>              Título Principal do Site -->
+        <img src="logo.png" alt="Imagem da Logomarca Casa Criativa">
+
+        <p>
+            Ficar em casa em períodos longos não deve ser nada fácil.
+        </p>
+        <p>
+            Por isso, iremos catalogar ideias, <strong> brincadeiras jogos, filmes, livros cursos, dicas </strong>
+            e tudo que for necessário para tornar esse momento mais interessante.
+        </p>
+        <p >
+            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
+        </p>
+
+        <button>+ Adicionar ideias</button>
+        <button class="fat">Ver ideias</button>
+
+        <p id="footer">com 💓 <a href="http://fb.com/arturgussi">TucaLover</a></p>
+
+        <script>
+            document     /* acesso ao documento html */
+                .querySelector("button.fat")  /* selecionando o botão fat */
+                .addEventListener("click", function(){   /* adicionando um ouvidor de eventos "click" e fazendo uma funcionalidade*/
+                    document
+                        .querySelector("#footer")
+                        .classList /* propriedade */
+                        .toggle("hide")  /* toggle é colocar e tirar */
+                })
+
+
+        </script>
+    </body>
+
+</html>
